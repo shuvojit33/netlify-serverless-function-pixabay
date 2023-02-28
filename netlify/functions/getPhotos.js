@@ -4,6 +4,7 @@ const process = require("process");
 
 exports.handler = async (event, context) => {
   // export async function handler(event, context) {
+    console.log("hello!");
   try {
     const { keyword } = event.queryStringParameters;
     let response = await axios.get(

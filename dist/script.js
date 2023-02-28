@@ -2,6 +2,8 @@ const searchbar = document.querySelector(".search");
 const submitBtn = document.querySelector(".search-btn");
 const photoWrapper = document.querySelector(".photo-wrapper");
 
+console.log("the first hello!")
+
 submitBtn.addEventListener("click", () => {
   getPhoto(searchbar.value);
   searchbar.value = "";
