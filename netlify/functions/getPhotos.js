@@ -2,6 +2,18 @@ require("dotenv").config();
 const axios = require("axios");
 const process = require("process");
 
+
+// //This solves the "No ‘Access-Control-Allow-Origin’ header is present on the requested resource."
+// let HEADERS = {
+//   'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept, Access-Control-Allow-Origin',
+//   'Content-Type': 'application/json', //optional
+//   'Access-Control-Allow-Methods': 'POST, OPTIONS',
+//   'Access-Control-Max-Age': '8640'
+// }
+// HEADERS['Access-Control-Allow-Origin'] = '*'
+// HEADERS['Vary'] = 'Origin'
+
+
 exports.handler = async (event, context) => {
   // export async function handler(event, context) {
   // console.log("hello 2!");
