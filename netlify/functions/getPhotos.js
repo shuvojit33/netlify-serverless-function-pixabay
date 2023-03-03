@@ -49,22 +49,15 @@ exports.handler = async (event, context) => {
 
     // console.log("feedURL-" + feedURL);
 
-    if (event.headers.referrer.includes('figma.com')) {
-      let response = await axios.get(feedURL, {
-        headers: { Accept: "application/json", "Accept-Encoding": "identity" },
-        params: { trophies: true },
-      });   
-  
-      return {
-        statusCode: 200,
-        body: JSON.stringify(response.data),
-      };
-     } else {
-       return {
-         statusCode: 401,
-         body: JSON.stringify('Unauthorized')
-       }
-     }
+    let response = await axios.get(feedURL, {
+      headers: { Accept: "application/json", "Accept-Encoding": "identity" },
+      params: { trophies: true },
+    });   
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify(response.data),
+    };
 
    
   } catch (error) {
