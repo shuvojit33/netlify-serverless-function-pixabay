@@ -71,7 +71,7 @@ exports.handler = async (event, context) => {
       body: JSON.stringify(response.data),
       headers: {
         // "access-control-allow-origin": "*",
-        "access-control-allow-origin": "figma.com",
+        "access-control-allow-origin": "https://www.figma.com/",
       },
     };
 
